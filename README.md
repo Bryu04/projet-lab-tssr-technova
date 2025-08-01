@@ -2,18 +2,18 @@
 
 ## 🚧 Avancement du projet
 
-| Étape                            | Statut        | Commentaires                         |
-|----------------------------------|---------------|------------------------------------|
-| Planification & définition       | ✅ Terminé    | Cahier des charges et architecture |
-| Création infrastructure VMware   | ✅ Terminé    | Réseaux VMnet configurés           |
-| Installation pfSense             | ✅ Terminé    | Pare-feu configuré                  |
-| Déploiement Serveurs Windows 2022| 🔄 En cours   | AD/DNS/DHCP en cours de configuration |
-| Mise en place serveur fichiers   | ⬜ À faire    |                                    |
-| Configuration clients Windows 10 | ⬜ À faire    |                                    |
-| Création DMZ & Serveur Web       | ⬜ À faire    |                                    |
-| Configuration des règles firewall| ⬜ À faire    |                                    |
-| Tests et validations             | ⬜ À faire    |                                    |
-| Rédaction rapport final          | ⬜ À faire    |                                    |
+| Étape                             | Statut        | Commentaires                                  |
+|----------------------------------|---------------|-----------------------------------------------|
+| Planification & définition       | ✅ Terminé     | Cahier des charges et plan d’architecture faits |
+| Création infrastructure VMware   | ⬜ À faire     | VMnet et segmentation à créer                 |
+| Installation pfSense             | ⬜ À faire     | Non encore installée                          |
+| Déploiement Serveurs Windows 2022| ⬜ À faire     | Prévu pour AD/DNS/DHCP et fichiers            |
+| Mise en place serveur fichiers   | ⬜ À faire     | Structure des partages déjà pensée            |
+| Configuration clients Windows 10 | ⬜ À faire     | Deux clients prévus (admin & direction)       |
+| Création DMZ & Serveur Web       | ⬜ À faire     | Web accessible depuis WAN via redirection     |
+| Configuration des règles firewall| ⬜ À faire     | Séparation WAN / LAN / DMZ à implémenter      |
+| Tests et validations             | ⬜ À faire     | Connectivité, GPO, NAT, sécurité à tester     |
+| Rédaction rapport final          | 🟠 En cours    | Rapport version 1 (sans schéma) démarré en LaTeX |
 
 ---
 
