@@ -92,11 +92,11 @@ Un dossier par groupe, avec des droits spécifiques via les groupes de sécurit�
 
 ### Arborescence des dossiers (exemple sur D:\Partages)
 
-D:
-└── Partages
-├── Admin
-├── Comptabilité
-└── Direction\
+D:\
+└── Partages\
+    ├── Admin\
+    ├── Comptabilité\
+    └── Direction\
 
 
 ### Groupes de sécurité correspondants (dans AD)
@@ -105,7 +105,7 @@ D:
 - G_Comptabilité
 - G_Direction
 
-Tu ajoutes les utilisateurs dans les groupes, et tu donnes les droits NTFS uniquement à ces groupes (et pas aux utilisateurs individuellement !)
+On ajoute les utilisateurs dans les groupes, et on donne les droits NTFS uniquement à ces groupes (et pas aux utilisateurs individuellement !)
 
 ### Droits NTFS recommandés
 
@@ -115,7 +115,7 @@ Tu ajoutes les utilisateurs dans les groupes, et tu donnes les droits NTFS uniqu
 | Comptabilité | G_Comptabilité    | Lecture/écriture |
 | Direction    | G_Direction       | Lecture seule    |
 
-Tu peux aussi masquer les dossiers non autorisés avec l’option “Masquer les dossiers auxquels les utilisateurs n’ont pas accès” (dans les paramètres de partage).
+On peut aussi masquer les dossiers non autorisés avec l’option “Masquer les dossiers auxquels les utilisateurs n’ont pas accès” (dans les paramètres de partage).
 
 ---
 
