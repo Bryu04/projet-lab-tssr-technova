@@ -13,7 +13,7 @@
 | Création DMZ & Serveur Web       | 🟡 En cours    | Modélisé dans Cisco PT, accessible via redirection NAT   
 | Configuration des règles firewall| 🟡 En cours    | ACL simulées dans Cisco PT (WAN/DMZ/LAN)                 
 | Tests et validations             | 🟡 En cours    | Tests partiels en simulation                             
-| Rédaction rapport final          | 🟠 En cours    | Rapport version 2 (avec schéma + config Cisco disponible |
+| Rédaction rapport final          | 🟠 En cours    | Rapport version 2 (avec schéma + config Cisco) disponible |
 
 ---
 
