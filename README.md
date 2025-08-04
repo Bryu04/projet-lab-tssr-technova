@@ -2,18 +2,18 @@
 
 ## 🚧 Avancement du projet
 
-| Étape                             | Statut        | Commentaires                                  |
-|----------------------------------|---------------|-----------------------------------------------|
-| Planification & définition       | ✅ Terminé     | Cahier des charges et plan d’architecture faits |
-| Création infrastructure VMware   | ⬜ À faire     | VMnet et segmentation à créer                 |
-| Installation pfSense             | ⬜ À faire     | Non encore installée                          |
-| Déploiement Serveurs Windows 2022| ⬜ À faire     | Prévu pour AD/DNS/DHCP et fichiers            |
-| Mise en place serveur fichiers   | ⬜ À faire     | Structure des partages déjà pensée            |
-| Configuration clients Windows 10 | ⬜ À faire     | Deux clients prévus (admin & direction)       |
-| Création DMZ & Serveur Web       | ⬜ À faire     | Web accessible depuis WAN via redirection     |
-| Configuration des règles firewall| ⬜ À faire     | Séparation WAN / LAN / DMZ à implémenter      |
-| Tests et validations             | ⬜ À faire     | Connectivité, GPO, NAT, sécurité à tester     |
-| Rédaction rapport final          | 🟠 En cours    | Rapport version 1 (sans schéma) démarré en LaTeX |
+| Étape                             | Statut        | Commentaires                                             
+|----------------------------------|---------------|----------------------------------------------------------
+| Planification & définition       | ✅ Terminé     | Cahier des charges et plan d’architecture faits          
+| Création infrastructure VMware   | ⬜ À faire     | VMnet et segmentation à créer                            
+| Installation pfSense             | ⬜ À faire     | Non encore installée                                     
+| Déploiement Serveurs Windows 2022| ⬜ À faire     | Prévu pour AD/DNS/DHCP et fichiers                       
+| Mise en place serveur fichiers   | ⬜ À faire     | Structure des partages déjà pensée                       
+| Configuration clients Windows 10 | ⬜ À faire     | Deux clients prévus (admin & direction)                  
+| Création DMZ & Serveur Web       | 🟡 En cours    | Modélisé dans Cisco PT, accessible via redirection NAT   
+| Configuration des règles firewall| 🟡 En cours    | ACL simulées dans Cisco PT (WAN/DMZ/LAN)                 
+| Tests et validations             | 🟡 En cours    | Tests partiels en simulation                             
+| Rédaction rapport final          | 🟠 En cours    | Rapport version 2 (avec schéma + config Cisco disponible |
 
 ---
 
@@ -170,5 +170,5 @@ N’hésitez pas à consulter le README pour le suivi des étapes.
 
 ---
 
-*Dernière mise à jour : 1 août 2025*
+*Dernière mise à jour : 4 août 2025*
 
