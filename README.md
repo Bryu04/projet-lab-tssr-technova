@@ -2,18 +2,18 @@
 
 ## 🚧 Avancement du projet
 
-| Étape                             | Statut        | Commentaires                                             
-|----------------------------------|---------------|----------------------------------------------------------
-| Planification & définition       | ✅ Terminé     | Cahier des charges et plan d’architecture faits          
-| Création infrastructure VMware   | ⬜ À faire     | VMnet et segmentation à créer                            
-| Installation pfSense             | ⬜ À faire     | Non encore installée                                     
-| Déploiement Serveurs Windows 2022| ⬜ À faire     | Prévu pour AD/DNS/DHCP et fichiers                       
-| Mise en place serveur fichiers   | ⬜ À faire     | Structure des partages déjà pensée                       
-| Configuration clients Windows 10 | ⬜ À faire     | Deux clients prévus (admin & direction)                  
-| Création DMZ & Serveur Web       | 🟡 En cours    | Modélisé dans Cisco PT, accessible via redirection NAT   
-| Configuration des règles firewall| 🟡 En cours    | ACL simulées dans Cisco PT (WAN/DMZ/LAN)                 
-| Tests et validations             | 🟡 En cours    | Tests partiels en simulation                             
-| Rédaction rapport final          | 🟠 En cours    | Rapport version 2 (avec schéma + config Cisco) disponible |
+| Étape                             | Statut        | Commentaires                                               |
+|----------------------------------|---------------|------------------------------------------------------------|
+| Planification & définition       | ✅ Terminé     | Cahier des charges et plan d’architecture faits            |
+| Création infrastructure VMware   | ✅ Terminé     | Utilisation de NAT & LAN Segment, VM créées manuellement   |
+| Installation pfSense             | ✅ Terminé     | Interfaces WAN/LAN/DMZ configurées, accès web fonctionnel  |
+| Déploiement Serveur AD/DNS/DHCP  | ✅ Terminé     | Services installés, domaine "homelab.infra" opérationnel   |
+| Mise en place serveur fichiers   | ⬜ À faire     | VM non encore installée                                    |
+| Configuration clients Windows 10 | ⬜ À faire     | Deux clients prévus (admin & direction)                    |
+| Création DMZ & Serveur Web       | ⬜ À faire     | VM à installer et configurer avant retour sur pfSense      |
+| Configuration des règles firewall| ⏳ À venir     | Prévue après installation complète des serveurs            |
+| Tests et validations             | ⏳ À venir     | Vérification de la communication et filtrage               |
+| Rédaction rapport final          | 🟠 En cours    | Version 3 prête, avec installation & configuration d’AD/pfSense |
 
 ---
 
@@ -156,7 +156,8 @@ On peut aussi masquer les dossiers non autorisés avec l’option “Masquer les
 
 ## 📂 Organisation du dépôt
 
-- `/docs` : rapports PDF, schémas et captures d’écran
+- `/docs` : schémas et captures d’écran
+- `/rapport` : rapports PDF
 - `/configurations` : scripts, fichiers de configuration (pfSense, GPO, etc.)
 - `/vmware` : fichiers de configuration VM si possible
 - `/scripts` : scripts bash, PowerShell, batch utilisés dans le projet
@@ -165,10 +166,10 @@ On peut aussi masquer les dossiers non autorisés avec l’option “Masquer les
 
 ## 📄 Rapport évolutif
 
-Le rapport de projet sera disponible en PDF dans `/docs`, avec une version mise à jour régulièrement selon l’avancement.  
+Le rapport de projet sera disponible en PDF dans `/rapport`, avec une version mise à jour régulièrement selon l’avancement.  
 N’hésitez pas à consulter le README pour le suivi des étapes.
 
 ---
 
-*Dernière mise à jour : 4 août 2025*
+*Dernière mise à jour : 6 août 2025*
 
