@@ -8,12 +8,12 @@
 | Création infrastructure VMware   | ✅ Terminé     | Utilisation de NAT & LAN Segment, VM créées manuellement   |
 | Installation pfSense             | ✅ Terminé     | Interfaces WAN/LAN/DMZ configurées, accès web fonctionnel  |
 | Déploiement Serveur AD/DNS/DHCP  | ✅ Terminé     | Services installés, domaine "homelab.infra" opérationnel   |
-| Mise en place serveur fichiers   | ⬜ À faire     | VM non encore installée                                    |
+| Mise en place serveur fichiers   | ✅ Terminé     | Serveur installé, intégré au domaine, disques formatés, partages et permissions NTFS configurés, groupes et utilisateurs créés |
 | Configuration clients Windows 10 | ⬜ À faire     | Deux clients prévus (admin & direction)                    |
 | Création DMZ & Serveur Web       | ⬜ À faire     | VM à installer et configurer avant retour sur pfSense      |
-| Configuration des règles firewall| ⏳ À venir     | Prévue après installation complète des serveurs            |
-| Tests et validations             | ⏳ À venir     | Vérification de la communication et filtrage               |
-| Rédaction rapport final          | 🟠 En cours    | Version 3 prête, avec installation & configuration d’AD/pfSense |
+| Configuration des règles firewall| ⬜ À faire     | Prévue après installation complète des serveurs            |
+| Tests et validations             | ⬜ À faire     | Vérification de la communication et filtrage               |
+| Rédaction rapport final          | 🟠 En cours    | Version 4 prête, intégrant l’ensemble des étapes réalisées, y compris la configuration complète du serveur de fichiers  |
 
 ---
 
@@ -88,32 +88,39 @@ TechNova Solutions est une PME spécialisée dans les services numériques. Elle
 
 ## 📁 1. Serveur de fichiers : structure simple et logique
 
-Un dossier par groupe, avec des droits spécifiques via les groupes de sécurité AD.
+Chaque groupe de travail a son propre dossier avec des permissions NTFS configurées uniquement via les groupes de sécurité AD, pas directement sur les utilisateurs.
 
-### Arborescence des dossiers (exemple sur D:\Partages)
+### Arborescence des dossiers (exemple sur E:\Partages)
 
-D:\
+E:\
 └── Partages\
-    ├── Admin\
+    ├── Direction\
+    ├── Secrétariat\
     ├── Comptabilité\
-    └── Direction\
+    └── Informatique\
+
 
 
 ### Groupes de sécurité correspondants (dans AD)
 
-- G_Admin
-- G_Comptabilité
 - G_Direction
+- G_Secrétariat
+- G_Comptabilité
+- G_Informatique
 
-On ajoute les utilisateurs dans les groupes, et on donne les droits NTFS uniquement à ces groupes (et pas aux utilisateurs individuellement !)
+Chaque utilisateur est membre du groupe lié à son service. Cela permet de gérer les accès via les groupes uniquement (pas d’attribution directe à un utilisateur !).
 
 ### Droits NTFS recommandés
 
-| Dossier      | Groupe autorisé   | Droits NTFS      |
-|--------------|-------------------|------------------|
-| Admin        | G_Admin           | Contrôle total   |
-| Comptabilité | G_Comptabilité    | Lecture/écriture |
-| Direction    | G_Direction       | Lecture seule    |
+
+| Dossier      | Groupe autorisé | Droits NTFS      |
+| ------------ | --------------- | ---------------- |
+| Direction    | G\_Direction    | Contrôle total   |
+| Secrétariat  | G\_Secrétariat  | Lecture/écriture |
+| Comptabilité | G\_Comptabilité | Lecture/écriture |
+| Informatique | G\_Informatique | Contrôle total   |
+
+
 
 On peut aussi masquer les dossiers non autorisés avec l’option “Masquer les dossiers auxquels les utilisateurs n’ont pas accès” (dans les paramètres de partage).
 
@@ -171,5 +178,5 @@ N’hésitez pas à consulter le README pour le suivi des étapes.
 
 ---
 
-*Dernière mise à jour : 6 août 2025*
+*Dernière mise à jour : 13 août 2025*
 
